@@ -1,0 +1,187 @@
+.home {
+  margin-top: 5rem;
+  &__carousel {
+    height: 60%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__main {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 3rem auto;
+
+    &__content {
+      h1 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 3.2rem;
+        color: $PINK;
+      }
+      p {
+        width: 100%;
+        font-size: 1.6rem;
+        text-align: justify;
+        font-family: "Lato";
+      }
+    }
+    &__accordian {
+      display: none;
+    }
+    &__tabSection {
+      display: block;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      
+      .nav-tabs {
+        li {
+          border-radius: 1rem;
+          a {
+            color: $PINK;
+          }
+        }
+        
+        li.active {
+          a {
+            margin-right: 2px;
+            line-height: 1.42857143;
+            border: 1px solid $WHITE;
+            background-color: $WHITE;
+            border-radius: 1rem 1rem 0 0;
+          }
+        }
+      }
+
+      .tab-content {
+        background: $WHITE;
+        border-radius: 0 1rem 1rem 1rem;
+        box-shadow: 0.5rem 0.5rem 2rem #d1d1d1;
+        .tab-pane {
+          &__tab1 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+
+            &__img {
+              width: 40%;
+              height: 16rem;
+              padding: 0 2rem;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            &__txt {
+              width: 60%;
+              height: 16rem;
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              justify-content: space-between;
+              color: $DARK_GREY;
+              &__para {
+                p {
+                  font-size: 1.6rem;
+                }
+              }
+              &__socialIcons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                img {
+                  margin: 0 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    &__carousel {
+      height: 80%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__main {
+      &__tabSection {
+        display: none;
+      }
+      &__accordian {
+        width: 100%;
+        display: block;
+        .accordion {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .card {
+            background: $WHITE;
+            width: 100%;
+            box-shadow: 0.1rem 0.1rem 0.1rem $LIGHT_GREY;
+            border-radius: 1rem;
+            border-bottom: 0.1rem solid $DARK_GREY;
+            .card-body {
+              background: $WHITE;
+              padding: 1rem;
+              &__para {
+                font-size: 1.6rem;
+                font-family: "Lato";
+                color: $DARK_GREY;
+              }
+              &__img {
+                width: 100%;
+                height: 20rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              &__socialIcons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                img {
+                  margin: 1rem;
+                }
+              }
+            }
+          }
+          button {
+            background: white;
+            width: 100%;
+            text-decoration: none;
+            color: $PINK;
+          }
+          .card:hover,
+          .card:active {
+            background: white;
+            width: 100%;
+            text-decoration: none;
+            border: none;
+            border-bottom: 1px solid $PINK;
+            border-radius: 1rem 1rem 0 0;
+          }
+        }
+      }
+    }
+  }
+}

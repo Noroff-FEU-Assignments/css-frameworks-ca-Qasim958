@@ -1,0 +1,94 @@
+.news {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  &__heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+    h1 {
+      font-size: 3.2rem;
+      font-family: "Playfair Display";
+      color: $PINK;
+    }
+  }
+  &__pagination {
+    width: 100%;
+    margin: 1rem;
+
+    .page-item {
+      a {
+        border: 0.1rem solid $PINK;
+        background: $WHITE;
+        color: $PINK;
+      }
+    }
+
+    .page-item:hover {
+      a {
+        border: 0.1rem solid $PINK;
+        color: $WHITE;
+        background: $PINK;
+      }
+    }
+
+    .pagination > .active > a {
+      background-color: $PINK;
+      color: $WHITE;
+      border: 0.1rem solid $PINK;
+    }
+  }
+
+  &__main {
+    &__posts {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      list-style: none;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      &__post {
+        width: 28rem;
+        margin: 1rem;
+        .card {
+          width: 100%;
+          border-radius: 1rem;
+          background: $WHITE;
+          
+          box-shadow: 0.5rem 0.5rem 1rem $DARK_GREY;
+          img {
+            width: 100%;
+            border-radius: 1rem 1rem 0 0;
+          }
+          .card-body {
+            padding: 1rem;
+            .card-title {
+              font-size: 2rem;
+              font-weight: bold;
+              font-family: "Lato";
+            }
+            .card-text {
+              color: $DARK_GREY;
+              font-size: 1.6rem;
+              font-family: "Lato";
+            }
+            .btn {
+              width: 90%;
+              margin: auto;
+              background: $PINK;
+              border-radius: 0.5rem;
+              color: $WHITE;
+              box-shadow: 2rem 0 0 $DARK_GREY;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.contact {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__heading {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-family: "Playfair Display", sans-serif;
+      font-size: 3.2rem;
+      color: $PINK;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 3rem;
+    &__form {
+      width: 50%;
+      form {
+        width: 100%;
+        padding: 4rem;
+        background: #efefef;
+        label {
+          font-family: "Lato";
+          font-size: 2rem;
+          color: $DARK_GREY;
+        }
+        input,
+        textarea {
+          border: none;
+          border-radius: 0.2rem;
+          padding: 1rem;
+          font-family: "Lato";
+          font-size: 1.8rem;
+          width: 100%;
+        }
+        textarea {
+          height: 10rem;
+          resize: none;
+        }
+        span {
+          background: $LIGHT_GREY;
+          color: $WHITE;
+        }
+        .main {
+          display: block;
+
+          position: relative;
+          padding-left: 45px;
+          cursor: pointer;
+          font-size: 1.2rem;
+          width: 100%;
+        }
+        input[type="checkbox"] {
+          visibility: hidden;
+        }
+        .remember {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 2.5rem;
+          width: 2.5rem;
+          border-radius: 0.3rem;
+          background-color: $PINK;
+        }
+        .main input:checked ~ .remember {
+          background-color: $PINK;
+        }
+        .remember:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        .main input:checked ~ .remember:after {
+          display: block;
+        }
+        .main .remember:after {
+          left: 8px;
+          bottom: 5px;
+          width: 6px;
+          height: 12px;
+          border: solid white;
+          border-width: 0 4px 4px 0;
+          transform: rotate(45deg);
+        }
+        button {
+          margin-top: 2rem;
+          width: 100%;
+          background: $DARK_GREY;
+          color: $WHITE;
+        }
+      }
+    }
+    &__info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 1rem 4rem;
+      &__contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        color: $DARK_GREY;
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+        p {
+          padding-left: 2rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .contact {
+    &__body {
+      flex-direction: column-reverse;
+      &__form {
+        width: 100%;
+      }
+    }
+  }
+}

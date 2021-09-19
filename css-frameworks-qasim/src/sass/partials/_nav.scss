@@ -1,0 +1,71 @@
+.navigation {
+  background: #efefef;
+  
+  &__container {
+    &__brand {
+      &__heading {
+        font-family: "Playfair Display";
+        font-weight: bold;
+        font-size: 20px;
+        font-style: italic;
+        color: $PINK !important;
+      }
+    }
+    &__primary {
+      &__menu {
+        li {
+          a {
+            margin-top: 1.5rem;
+            padding: 0.1rem 1rem;
+            color: #000000 !important;
+          }
+        }
+        li:hover {
+          background: #efefef !important;
+        }
+        li.active {
+          a {
+            color: #000;
+            background-color: $WHITE !important;
+          }
+        }
+      }
+
+      &__search {
+        &__form {
+          &--button {
+            background: $PINK;
+            color: $WHITE;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .navigation {
+    &__container {
+      &__primary {
+        &__search {
+          &__form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin: 0 1rem;
+
+            &--input {
+              flex-grow: 2;
+            }
+            &--button {
+              margin-top: -0.4rem;
+              margin-left: 0.5rem;
+              padding: 0.6rem 2rem;
+              flex-grow: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

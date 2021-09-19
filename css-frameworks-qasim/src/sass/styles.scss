@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import "./partials/variables.scss";
+@import "./partials/nav.scss";
+@import "./partials/home.scss";
+@import "./partials/news.scss";
+@import "./partials/contact.scss";
+@import "./partials/footer.scss";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center,$WHITE, $LIGHTER_GREY);
+  overflow-x: hidden;
+}
+
